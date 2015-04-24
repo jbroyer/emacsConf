@@ -1,0 +1,22 @@
+# -*- mode: snippet -*-
+# name: header_docstring
+# key: hd
+# --
+\'\'\'
+:mod:\`${1:`(file-name-base buffer-file-name)`}\` -- ${2:$1}
+=====================================
+
+.. module:: $1
+   :creation: ${3:`(current-time-string)`}
+   :platform: ${4:$$(yas-choose-value '("Unix" "Unix, Darwin" "Unix, Windows" "Unix, Darwin, Windows"))}
+   :synopsis: ${5:$2}
+.. moduleauthor:: ${6:`(getenv "USER")`} <${7:`(getenv "LOGNAME")`}@mikrosimage.eu>
+.. todoList::
+      * $8
+
+.. examples::
+      * $9
+
+\'\'\'
+
+$0
