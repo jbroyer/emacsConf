@@ -8,8 +8,8 @@
 ;; YAML-MODE
 (require  'yaml-mode)
 (add-hook 'yaml-mode-hook
-		  (lambda ()
-			(define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+	  (lambda ()
+	    (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ; --------------------------------------------------------------------
 ;; MEL-MODE
@@ -18,8 +18,11 @@
 ; --------------------------------------------------------------------
 ;; YASNIPPET
 (add-to-list 'load-path
-              "~/.emacs.d/plugins/yasnippet")
+	     "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets"
+	"~/.emacs.d/plugins/yasnippet/snippets"))
 (yas-global-mode 1)
 
 ; --------------------------------------------------------------------
