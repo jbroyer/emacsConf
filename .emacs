@@ -24,6 +24,7 @@
       '("~/.emacs.d/snippets"
 	"~/.emacs.d/plugins/yasnippet/snippets"))
 (yas-global-mode 1)
+(setq yas-triggers-in-field nil)
 
 ; --------------------------------------------------------------------
 ;; MAYA COMMAND PORT
