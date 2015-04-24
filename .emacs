@@ -2,36 +2,38 @@
 ;; GENERAL
 
 ;load el files
-(add-to-list 'load-path "~/elisp3")
 (add-to-list 'load-path "~/.emacs.d")
 
 ; --------------------------------------------------------------------
 ;; YAML-MODE
-
 (require  'yaml-mode)
-
 (add-hook 'yaml-mode-hook
 		  (lambda ()
 			(define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ; --------------------------------------------------------------------
 ;; MEL-MODE
-
 (require  'mel-mode)
 
 ; --------------------------------------------------------------------
-;; MAYA COMMAND PORT
+;; YASNIPPET
+(add-to-list 'load-path
+              "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
 
-(add-hook
- 'python-mode-hook
- (lambda ()
-   (require 'etom)
-   (setq etom-default-host "localhost")
-   (setq etom-default-port 2222)
-   (local-set-key (kbd "C-c C-r") 'etom-send-region)
-   (local-set-key (kbd "C-c C-c") 'etom-send-buffer)
-   (local-set-key (kbd "C-c C-l") 'etom-send-buffer)
-   (local-set-key (kbd "C-c C-z") 'etom-show-buffer)))
+; --------------------------------------------------------------------
+;; MAYA COMMAND PORT
+;; (add-hook
+;;  'python-mode-hook
+;;  (lambda ()
+;;    (require 'etom)
+;;    (setq etom-default-host "localhost")
+;;    (setq etom-default-port 2222)
+;;    (local-set-key (kbd "C-c C-r") 'etom-send-region)
+;;    (local-set-key (kbd "C-c C-c") 'etom-send-buffer)
+;;    (local-set-key (kbd "C-c C-l") 'etom-send-buffer)
+;;    (local-set-key (kbd "C-c C-z") 'etom-show-buffer)))
 
 
 ; --------------------------------------------------------------------
@@ -40,19 +42,16 @@
 
 ; --------------------------------------------------------------------
 ;; AUTO-COMPLETE
-
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/homes/jbro/.emacs.d//ac-dict")
-(ac-config-default)
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories "/homes/jbro/.emacs.d//ac-dict")
+;; (ac-config-default)
 
 
 ; --------------------------------------------------------------------
 ;; COULEURS
-
 (require 'color-theme)
 (setq color-theme-is-global t)
 (color-theme-charcoal-black)
-
 
 ; couleurs dans le texte
 (global-font-lock-mode t)
@@ -81,7 +80,7 @@
 ; --------------------------------------------------------------------
 ;; Complete tag binding
 
-(global-set-key "\M-," 'complete-tag) 
+;; (global-set-key "\M-," 'complete-tag) 
 
 ;(defun my-etags-shortcuts ()
 ;  (cond ((eq major-mode 'mel-mode)
@@ -92,22 +91,12 @@
 ; ----------------------------------------------------------------------
 ;; AUTO-FILL MODE
 
-(add-hook 'text-mode-hook 
-          (lambda ()
-            (auto-fill-mode t)
-            (setq default-justification 'full))
-          )
+;; (add-hook 'text-mode-hook 
+;;           (lambda ()
+;;             (auto-fill-mode t)
+;;             (setq default-justification 'full))
+;;           )
 
-; ---------------------------------------------------------------------
-;; For editing C files in OpenGL minor mode
-
-(add-hook 'c-mode-hook
- 	  '(lambda ()
- 	     (cond ((string-match "/\\([Oo]pen\\)?[Gg][Ll]/"
- 				  (buffer-file-name))
- 		    (require 'OpenGL)
-		    (OpenGL-minor-mode 1)
-		    (OpenGL-setup-keys)))))
 
 ; -----------------------------------------------------------------------
 ;; MOLETTE DE LA SOURIS
@@ -140,7 +129,7 @@
 ; -----------------------------------------------------------------------
 ;; MISC
 
-; Afficher la 'parenthÃ¨se correspondante'
+; Afficher la 'parenthese correspondante'
 (require 'paren)
 (show-paren-mode 1)
 
