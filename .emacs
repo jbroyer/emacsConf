@@ -42,8 +42,39 @@
 (ac-config-default)
 
 ; --------------------------------------------------------------------
-;; JEDI
+;; DEFERRED (FOR EPC)
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/emacs-deferred")
+(require 'deferred)
+(require 'concurrent)
 
+; --------------------------------------------------------------------
+;; CTABLE (FOR EPC)
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/emacs-ctable")
+(require 'ctable)
+
+; --------------------------------------------------------------------
+;; EPC (FOR JEDI)
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/emacs-epc")
+(require 'epc)
+
+; --------------------------------------------------------------------
+;; PYTHON-ENVIRONMENT (FOR JEDI)
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/emacs-python-environment")
+(require 'python-environment)
+
+; --------------------------------------------------------------------
+;; JEDI
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/emacs-jedi")
+(require 'jedi)
+(setq jedi:server-command '("~/.emacs.d/plugins/emacs-jedi/jediepcserver.py"))
+(autoload 'jedi:setup "jedi" nil t)
+(add-hook 'python-mode-hook 'jedi:setup)
+(setq jedi:complete-on-dot t)
 
 ; --------------------------------------------------------------------
 ;; MAYA COMMAND PORT
