@@ -27,6 +27,17 @@
 (setq yas-triggers-in-field nil)
 
 ; --------------------------------------------------------------------
+;; AUTO-COMPLETE
+;; (add-to-list 'ac-dictionary-directories
+;; 	     "~/.emacs.d/plugins/auto-complete/dict")
+;; (require 'auto-complete-config)
+;; (ac-config-default)
+
+; --------------------------------------------------------------------
+;; JEDI
+
+
+; --------------------------------------------------------------------
 ;; MAYA COMMAND PORT
 ;; (add-hook
 ;;  'python-mode-hook
@@ -53,17 +64,22 @@
 
 ; --------------------------------------------------------------------
 ;; COULEURS
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/color-theme-6.6.0")
 (require 'color-theme)
+(eval-after-load "color-theme"
+  '(progn
+     (color-theme-initialize)
+     (color-theme-charcoal-black)))
 (setq color-theme-is-global t)
-(color-theme-charcoal-black)
 
-; couleurs dans le texte
+; Couleurs dans le texte
 (global-font-lock-mode t)
 
-; maximum de couleur
+; Maximum de couleur
 (setq font-lock-maximum-decoration t)
 
-; region selectionne surbrillance
+; Region selectionne surbrillance
 (transient-mark-mode t)
 
 
