@@ -71,6 +71,7 @@
 (add-to-list 'load-path
 	     "~/.emacs.d/plugins/emacs-jedi")
 (require 'jedi)
+;$PYTHONPATH=~/.emacs.d/plugins/jedi/:~/.emacs.d/plugins/python-epc/:~/.emacs.d/plugins/sexpdata/
 (setq jedi:server-command '("~/.emacs.d/plugins/emacs-jedi/jediepcserver.py"))
 (autoload 'jedi:setup "jedi" nil t)
 (add-hook 'python-mode-hook 'jedi:setup)
