@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: param_docstring
+# key: pd
+# group: docstring
+# --
+:param ${1:arg}: $2
+:type $1: $3
