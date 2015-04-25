@@ -27,11 +27,19 @@
 (setq yas-triggers-in-field nil)
 
 ; --------------------------------------------------------------------
+;; POPUP (FOR AUTO-COMPLETE)
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/popup")
+(require 'popup)
+
+; --------------------------------------------------------------------
 ;; AUTO-COMPLETE
-;; (add-to-list 'ac-dictionary-directories
-;; 	     "~/.emacs.d/plugins/auto-complete/dict")
-;; (require 'auto-complete-config)
-;; (ac-config-default)
+(add-to-list 'load-path
+	     "~/.emacs.d/plugins/auto-complete")
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories
+	     "~/.emacs.d/plugins/auto-complete/dict")
+(ac-config-default)
 
 ; --------------------------------------------------------------------
 ;; JEDI
@@ -49,18 +57,6 @@
 ;;    (local-set-key (kbd "C-c C-c") 'etom-send-buffer)
 ;;    (local-set-key (kbd "C-c C-l") 'etom-send-buffer)
 ;;    (local-set-key (kbd "C-c C-z") 'etom-show-buffer)))
-
-
-; --------------------------------------------------------------------
-;; PYTHON IDE
-;; (load-file "/homes/jbro/elisp/gabrielelanaro-emacs-for-python-1cfe7c5/epy-init.el")
-
-; --------------------------------------------------------------------
-;; AUTO-COMPLETE
-;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories "/homes/jbro/.emacs.d//ac-dict")
-;; (ac-config-default)
-
 
 ; --------------------------------------------------------------------
 ;; COULEURS
@@ -93,8 +89,8 @@
 ; --------------------------------------------------------------------
 ;; Line numbers
 
-(require 'line-num)
-(turn-on-line-numbers-display t)
+;; (require 'line-num)
+;; (turn-on-line-numbers-display t)
 
 
 ; --------------------------------------------------------------------

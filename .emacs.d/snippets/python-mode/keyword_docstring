@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: keyword_docstring
+# key: kd
+# group: docstring
+# --
+:keyword ${1:arg}: $2
+:type $1: $3

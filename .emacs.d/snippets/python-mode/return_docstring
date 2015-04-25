@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+# name: return_docstring
+# key: rd
+# group: docstring
+# --
+:rtype: $1
