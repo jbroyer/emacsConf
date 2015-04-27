@@ -1,0 +1,43 @@
+[submodule "emacs-ctable"]
+    path = .emacs.d/plugins/emacs-ctable
+    url = git@github.com:kiwanami/emacs-ctable.git
+
+[submodule "emacs-deferred"]
+    path = .emacs.d/plugins/emacs-deferred
+    url = git@github.com:kiwanami/emacs-deferred.git
+
+[submodule "emacs-epc"]
+    path = .emacs.d/plugins/emacs-epc
+    url = git@github.com:kiwanami/emacs-epc.git
+
+[submodule "yasnippet"]
+    path = .emacs.d/plugins/yasnippet
+    url = https://github.com/capitaomorte/yasnippet
+
+[submodule "sexpdata"]
+    path = .emacs.d/plugins/sexpdata
+    url = git@github.com:tkf/sexpdata.git
+
+[submodule "emacs-python-environment"]
+    path = .emacs.d/plugins/emacs-python-environment
+    url = git@github.com:tkf/emacs-python-environment.git
+
+[submodule "popup"]
+    path = .emacs.d/plugins/popup
+    url = git@github.com:auto-complete/popup-el.git
+
+[submodule "emacs-jedi"]
+    path = .emacs.d/plugins/emacs-jedi
+    url = git@github.com:tkf/emacs-jedi.git
+
+[submodule "python-epc"]
+    path = .emacs.d/plugins/python-epc
+    url = git@github.com:tkf/python-epc.git
+
+[submodule "auto-complete"]
+    path = .emacs.d/plugins/auto-complete
+    url = git@github.com:auto-complete/auto-complete.git
+
+[submodule "jedi"]
+    path = .emacs.d/plugins/jedi
+    url = git@github.com:davidhalter/jedi.git
